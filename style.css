@@ -1,0 +1,206 @@
+html,body{
+  margin:0;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  background:black;
+  font-family:Arial;
+}
+
+canvas{
+  display:block;
+}
+
+/* LOADING */
+
+#loadingScreen{
+  position:absolute;
+  inset:0;
+  background:black;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+#loadingBar{
+  width:350px;
+  height:25px;
+  background:#222;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+#loadingProgress{
+  width:0%;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    #00ff88,
+    #00ccff
+  );
+}
+
+/* MENU */
+
+#menu{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:420px;
+  padding:40px;
+  border-radius:20px;
+  background:rgba(0,0,0,0.7);
+  text-align:center;
+  color:white;
+  display:none;
+}
+
+#startBtn{
+  padding:18px 35px;
+  border:none;
+  border-radius:15px;
+  background:linear-gradient(
+    45deg,
+    #00ff88,
+    #00ccff
+  );
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* HUD */
+
+#hud{
+  position:absolute;
+  top:20px;
+  left:20px;
+  color:white;
+  z-index:50;
+}
+
+.hudBox{
+  margin-bottom:12px;
+}
+
+#lifeBar,
+#staminaBox,
+#xpBar{
+  width:280px;
+  height:22px;
+  border-radius:20px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.2);
+}
+
+#life{
+  width:100%;
+  height:100%;
+  background:lime;
+}
+
+#stamina{
+  width:100%;
+  height:100%;
+  background:cyan;
+}
+
+#xp{
+  width:0%;
+  height:100%;
+  background:gold;
+}
+
+#levelBox,
+#info,
+#mission,
+#inventory,
+#notification{
+  background:rgba(0,0,0,0.5);
+  color:white;
+  padding:12px 18px;
+  border-radius:15px;
+  margin-top:10px;
+}
+
+#mission{
+  position:absolute;
+  bottom:25px;
+  right:20px;
+}
+
+#inventory{
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+#notification{
+  position:absolute;
+  top:20px;
+  right:220px;
+}
+
+/* CROSSHAIR */
+
+#crosshair{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:white;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 15px white;
+}
+
+/* MINIMAP */
+
+#miniMap{
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  overflow:hidden;
+  background:rgba(0,0,0,0.5);
+  border:4px solid white;
+}
+
+#playerDot{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#00ff88;
+  transform:translate(-50%,-50%);
+}
+
+/* BOSS */
+
+#bossBar{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:520px;
+  height:30px;
+  border-radius:20px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.2);
+}
+
+#bossLife{
+  width:100%;
+  height:100%;
+  background:red;
+}
